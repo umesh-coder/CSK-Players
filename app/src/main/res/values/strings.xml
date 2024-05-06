@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CSK Players</string>
+    <string name="name">name</string>
+    <string name="born">Born</string>
+    <string name="role">Role</string>
+    <string name="batting_style">Batting Style</string>
+    <string name="bowling_style">Bowling Style</string>
+    <string name="nationality">Nationality</string>
+    <string name="ipl_debut">IPL Debut</string>
+</resources>
