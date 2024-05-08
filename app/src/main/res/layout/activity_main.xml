@@ -8,14 +8,40 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chennai Super Kings"
+        android:textAlignment="center"
+        android:textColor="#FFAB00"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        />
+
+    <include layout="@layout/input_player_details"
+        android:id="@+id/input_data"
+        android:visibility="gone"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_data"
+        app:fabSize="normal"
+        android:id="@+id/Add_player"
+        android:src="@drawable/ic_launcher_foreground"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:background="#FFEA00"
+
+        android:paddingTop="5dp"
+        android:layout_below="@+id/input_data"
         android:id="@+id/player_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:listitem="@layout/playerdetails"
-
         />
 
 </RelativeLayout>

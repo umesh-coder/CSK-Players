@@ -1,10 +1,29 @@
 <resources>
     <string name="app_name">CSK Players</string>
-    <string name="name">name</string>
+    <string name="name"><font align="center" size="10" color="grey">name</font></string>
     <string name="born">Born</string>
     <string name="role">Role</string>
     <string name="batting_style">Batting Style</string>
     <string name="bowling_style">Bowling Style</string>
     <string name="nationality">Nationality</string>
     <string name="ipl_debut">IPL Debut</string>
+
+
+    <string name="enter_matches"><font align="center" size="15" color="grey">Enter Matches</font></string>
+    <string name="enter_runs"><font align="center" size="15" color="grey">Enter Runs</font></string>
+    <string name="enter_wickets"><font align="center" size="15" color="grey">Enter Wickets</font></string>
+    <string name="enter_fifties"><font align="center" size="15" color="grey">Enter Fifties</font></string>
+    <string name="enter_hundreds"><font align="center" size="15" color="grey">Enter Hundreds</font></string>
+    <string name="enter_highest_score"><font align="center" size="15" color="grey">Enter Highest Score</font></string>
+
+    <string name="tets"><font align="center" size="12">  Enter user Here </font></string>
+    <string name="enter_name"><font align="center" size="15" color="grey">Enter Name</font></string>
+    <string name="enter_date_of_birth"><font align="center" size="15" color="grey">Enter DOB</font></string>
+    <string name="enter_role"><font align="center" size="15" color="grey">Enter Role</font></string>
+    <string name="enter_batting_style"><font align="center" size="15" color="grey">Enter Batting Style</font></string>
+    <string name="enter_bowling_style"><font align="center" size="15" color="grey">Enter Bowling Style</font></string>
+    <string name="enter_nationality"><font align="center" size="15" color="grey">Enter Nationality</font></string>
+    <string name="enter_ipl_debut"><font align="center" size="15" color="grey">Enter IPL Debut</font></string>
+    <string name="enter_auction_price"><font align="center" size="15" color="grey">Enter Auction Price</font></string>
+    <string name="save_deatils">Save Details</string>
 </resources>

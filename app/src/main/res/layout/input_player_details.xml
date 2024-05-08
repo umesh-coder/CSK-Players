@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/input_player_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="25dp"
+    android:padding="5dp"
+    android:background="@drawable/border"
+    android:paddingEnd="10dp"
+    android:layout_marginTop="40dp"
+    android:layout_marginBottom="10dp"
+    >
+
+
+    <ImageView
+        android:paddingTop="5dp"
+        android:id="@+id/player_img1"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:contentDescription="Select Image" />
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_marginLeft="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/player_img1"
+        android:orientation="vertical"
+        >
+
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:maxLength="25"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_name"
+            android:inputType="text"
+            android:autofillHints="Name"
+            />
+
+        <EditText
+            android:maxLength="10"
+            android:id="@+id/bornEditText"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_date_of_birth"
+            android:inputType="date"
+            android:autofillHints="date"
+             />
+
+        <EditText
+            android:autofillHints="Role"
+            android:maxLength="10"
+            android:id="@+id/roleEditText"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_role"
+            android:inputType="text"/>
+
+        <EditText
+            android:autofillHints="Batting Style"
+            android:maxLength="15"
+            android:id="@+id/battingStyleEditText"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_batting_style"
+            android:inputType="text"/>
+
+        <EditText
+            android:autofillHints="Bowling Style"
+            android:maxLength="15"
+            android:id="@+id/bowlingStyleEditText"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_bowling_style"
+            android:inputType="text"/>
+
+        <EditText
+            android:autofillHints="Nationality"
+            android:id="@+id/nationalityEditText"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_nationality"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/iplDebutEditText"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_ipl_debut"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/auctionPriceEditText"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_auction_price"
+            android:inputType="numberDecimal"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="#FFB74D"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sava_details"
+                android:text="@string/save_deatils"
+                android:layout_marginLeft="30dp"
+                />
+
+    </LinearLayout>
+
+
+
+    <TableLayout
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/player_img1"
+
+        android:textColor="@color/black"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:id="@+id/matchesEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_matches"
+                android:inputType="number"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:id="@+id/runsEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_runs"
+                android:inputType="number"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:id="@+id/wicketsEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_wickets"
+                android:inputType="number"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:id="@+id/fiftiesEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_fifties"
+                android:inputType="number"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:id="@+id/hundredsEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_hundreds"
+                android:inputType="number"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:id="@+id/highestScoreEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_highest_score"
+                android:inputType="number"/>
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>

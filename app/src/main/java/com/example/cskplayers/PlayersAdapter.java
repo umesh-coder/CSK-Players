@@ -36,7 +36,7 @@ public class PlayersAdapter extends RecyclerView.Adapter<PlayersAdapter.MyViewHo
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         PlayerModel p1=playerModelArrayList.get(position);
-        holder.playerImg.setImageResource(p1.getPlayerImg());
+        holder.playerImg.setImageBitmap(p1.getPlayerImg());
         holder.nameTextView.setText("Name: "+p1.getName());
         holder.bornTextView.setText("Born: "+p1.getBorn());
         holder.roleTextView.setText("Role: "+p1.getRole());

@@ -1,5 +1,7 @@
 package com.example.cskplayers;
 
+import android.graphics.Bitmap;
+
 public class PlayerModel {
 
 
@@ -17,10 +19,10 @@ public class PlayerModel {
     private String fifties;
     private String hundreds;
     private String highestScore;
-    private int playerImg;
+    private Bitmap playerImg;
 
 
-    public PlayerModel(String name, String born, String role, String battingStyle, String bowlingStyle, String nationality, String iplDebut, String auctionPrice, String matches, String runs, String wickets, String fifties, String hundreds, String highestScore, int playerImg) {
+    public PlayerModel(String name, String born, String role, String battingStyle, String bowlingStyle, String nationality, String iplDebut, String auctionPrice, String matches, String runs, String wickets, String fifties, String hundreds, String highestScore, Bitmap playerImg) {
         this.name = name;
         this.born = born;
         this.role = role;
@@ -150,11 +152,11 @@ public class PlayerModel {
         this.highestScore = highestScore;
     }
 
-    public int getPlayerImg() {
+    public Bitmap getPlayerImg() {
         return playerImg;
     }
 
-    public void setPlayerImg(int playerImg) {
+    public void setPlayerImg(Bitmap playerImg) {
         this.playerImg = playerImg;
     }
 
