@@ -25,5 +25,5 @@
     <string name="enter_nationality"><font align="center" size="15" color="grey">Enter Nationality</font></string>
     <string name="enter_ipl_debut"><font align="center" size="15" color="grey">Enter IPL Debut</font></string>
     <string name="enter_auction_price"><font align="center" size="15" color="grey">Enter Auction Price</font></string>
-    <string name="save_deatils">Save Details</string>
+    <string name="save_deatils">Add Player</string>
 </resources>

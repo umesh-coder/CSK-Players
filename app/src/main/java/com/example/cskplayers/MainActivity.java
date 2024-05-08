@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.text.Layout;
@@ -31,7 +32,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     View input_layout;
-
+    Boolean inputLayoutIsOpen=true;
 
     public Bitmap imgData;
     private static final int PICK_IMAGE_REQUEST = 1;
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (validateFields()){
                     saveData(view);
+                    clearData();
                     input_layout.setVisibility(View.GONE);
 
                 }else {
@@ -85,8 +87,17 @@ public class MainActivity extends AppCompatActivity {
         add_player.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(inputLayoutIsOpen){
+                    add_player.setImageDrawable(getDrawable(android.R.drawable.ic_menu_close_clear_cancel));
+                    input_layout.setVisibility(View.VISIBLE);
+                    inputLayoutIsOpen=false;
+                }else{
+                    add_player.setImageDrawable(getDrawable(android.R.drawable.ic_input_add));
+                    input_layout.setVisibility(View.GONE);
+                    inputLayoutIsOpen=true;
+                }
 
-               input_layout.setVisibility(View.VISIBLE);
+
 
             }
         });
@@ -99,6 +110,24 @@ public class MainActivity extends AppCompatActivity {
         // Initialize RecyclerView adapter
         pd = new PlayersAdapter(getApplicationContext(), playerModelArrayList);
         playerDetails.setAdapter(pd);
+    }
+
+    private void clearData() {
+
+        nameEditText.getText().clear();
+        bornEditText.getText().clear();
+        roleEditText.getText().clear();
+        battingStyleEditText.getText().clear();
+        bowlingStyleEditText.getText().clear();
+        nationalityEditText.getText().clear();
+        iplDebutEditText.getText().clear();
+        auctionPriceEditText.getText().clear();
+        matches.getText().clear();
+        runs.getText().clear();
+        higestscore.getText().clear();
+        fifties.getText().clear();
+        hundreds.getText().clear();
+        wickets.getText().clear();
     }
 
     private void initializeViews() {
@@ -299,34 +328,16 @@ public class MainActivity extends AppCompatActivity {
             isValid = false;
         }
 
-
-
-//        if(isBitmapEmpty(imgData)){
-////            Toast.makeText(getApplicationContext(),"Please Select Image",Toast.LENGTH_SHORT).show();
-////            isValid=false;
-//        }
+        if(imgData==null ){
+            playerImageView.setImageBitmap(imgData);
+            Toast.makeText(getApplicationContext(),"Please Select Image",Toast.LENGTH_SHORT).show();
+            isValid=false;
+        }
 
         return isValid;
     }
 
 
-    public boolean isBitmapEmpty(Bitmap bitmap) {
-        int width = bitmap.getWidth();
-        int height = bitmap.getHeight();
-
-        // Iterate through each pixel
-        for (int y = 0; y < height; y++) {
-            for (int x = 0; x < width; x++) {
-                int pixel = bitmap.getPixel(x, y);
-
-                // Check if the pixel is not fully transparent
-                if ((pixel & 0xff000000) != 0) { // Check the alpha channel
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
 
 
 
